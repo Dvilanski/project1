@@ -1,4 +1,4 @@
-const [Instractor, instValid] = require("../instractors.js")
+const [Instractor, instValid] = require("../../instractors.js")
 const [names, lastName] = require("./names.js")
 const passport = require("passport")
 const LocalStrategy = require("passport-local")

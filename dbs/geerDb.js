@@ -13,7 +13,8 @@ mongoose.connect('mongodb://localhost:27017/project1', { useNewUrlParser: true, 
 const geerSchema = Schema({
     name: String,
     barcode: String,
-    instractor: Schema.Types.ObjectId
+    instractor: Schema.Types.ObjectId,
+    img: String
 })
 
 const Geer = mongoose.model("Geer", geerSchema)
