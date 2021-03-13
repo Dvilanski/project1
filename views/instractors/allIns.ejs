@@ -1,0 +1,23 @@
+<% layout('/layout/layout') -%>
+    <div class="container">
+        <div class="row">
+            <% for( let ins of instractors ) { %>
+                <div class="col-md-3 py-1 px-1">
+                    <div class="card  ">
+                        <img src="https://images.freeimages.com/images/large-previews/277/no-destiny-1311132.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= ins.name %>
+                                    <%= ins.lastName %>
+                            </h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, a?
+                                Cupiditate
+                                assumenda, soluta</p>
+                            <a href="instractors/<%= ins.id %>/show " class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
