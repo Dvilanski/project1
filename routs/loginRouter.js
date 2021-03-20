@@ -3,6 +3,9 @@ const logRouter = express.Router()
 const { Instractor } = require("../dbs/instractors")
 const passport = require("passport")
 
+logRouter.get("/", (req, res) => {
+    res.redirect("/login")
+})
 
 logRouter.get("/login", async (req, res) => {
     res.render('./login')

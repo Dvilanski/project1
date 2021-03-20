@@ -1,2 +1,30 @@
-<%- layout("../layout/layout") %>
-    <h1>geer</h1>
+<%- layout("./layout/layout") %>
+    <div class="container">
+        <div class="row">
+            <% categorys.forEach(category=> { %>
+                <div class="col-lg-3 md-4 py-1 px-1">
+                    <div class="card" id="<%= category.name %>Card " style="width: 18rem;">
+                        <img src="<%= category.img %> " class="card-img-top " style="max-height: 10em;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= category.name %>
+                            </h5>
+                            <div class="card-text">
+                                <ul>
+                                    <li>כמות במלאי: <%= count[category.name] %>
+                                    </li>
+                                    <li>כמות בשימוש:</li>
+                                    <li>משתמשים:</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <% }) %>
+        </div>
+    </div>
+
+
+    <script src="/javaScript/cardBehavoreScript.js"></script>

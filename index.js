@@ -8,7 +8,8 @@ const passport = require("passport")
 const localStrategy = require("passport-local")
 const methodOverride = require("method-override")
 
-
+const axiosApi = require("./routs/axiosApi/axiosApi.js")
+const geerRouter = require("./routs/geerRouter.js")
 const instRouter = require("./routs/instractorsRouter.js")
 const logRouter = require("./routs/loginRouter")
 
@@ -36,8 +37,10 @@ passport.deserializeUser(Instractor.deserializeUser());
 
 
 app.use("/", logRouter)
+app.use("/api", axiosApi)
 
 app.use("/instractors", isLogedin, instRouter)
+app.use("/geer", isLogedin, geerRouter)
 
 app.use((err, req, res, next) => {
     console.log(err)
