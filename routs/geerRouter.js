@@ -11,4 +11,12 @@ geerRouter.get("/", async (req, res) => {
     res.render("../views/geer/index", { categorys, count })
 })
 
+geerRouter.get("/add", (req, res) => {
+    res.render("geer/add.ejs")
+})
+
+geerRouter.post("/add", async (req, res) => {
+    console.log(req.body)
+    res.send("ok")
+})
 module.exports = geerRouter;

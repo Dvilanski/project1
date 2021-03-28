@@ -1,0 +1,19 @@
+<%- layout("./layout/layout") %>
+
+    <div class="container">
+        <form action="/geer/add" method=POST>
+            <h2 class="form-title">הוספת ציוד</h2>
+            <div>
+                <label for="geerType">Geer Type:</label>
+                <select name="geerType" id="geerType" class="form-control">
+                    <option value="ambu">Ambu</option>
+                    <option value="aed">AED</option>
+                    <option value="anny">Anny</option>
+                </select>
+            </div>
+            <div>
+                <label for="barcode" class="form-label">Barcode</label>
+                <input type="number" name="barcode" class="form-control">
+            </div>
+        </form>
+    </div>

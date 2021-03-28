@@ -1,5 +1,5 @@
 <%- layout("./layout/layout") %>
-    <div class="container">
+    <div class="container" id="main-container">
         <div class="row">
             <% categorys.forEach(category=> { %>
                 <div class="col-lg-3 md-4 py-1 px-1">
@@ -17,7 +17,10 @@
                                     <li>משתמשים:</li>
                                 </ul>
                             </div>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Launch demo modal
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -25,6 +28,10 @@
                 <% }) %>
         </div>
     </div>
+
+
+
+
 
 
     <script src="/javaScript/cardBehavoreScript.js"></script>
